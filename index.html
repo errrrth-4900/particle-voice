@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>AI Assistant</title><style>body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgb(15, 15, 15);
+  font-family: Arial, sans-serif;
+}
+#c {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#controls {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+#speakButton {
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+#speakButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+#speakButton.listening {
+  background: rgba(255, 0, 0, 0.2);
+  animation: pulse 1.5s infinite;
+}
+#status {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-align: center;
+  min-height: 20px;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}</style></head><body><canvas id="c"></canvas><div id="controls"><div id="status"></div><button id="speakButton">Hold to Speak</button></div><script src="https://mrdoob.github.io/stats.js/build/stats.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script><script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script><script src="script.js"></script></body></html>
