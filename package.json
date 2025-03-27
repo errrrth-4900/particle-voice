@@ -1,6 +1,12 @@
 {
+  "name": "particle-voice",
+  "version": "1.0.0",
+  "homepage": "https://errrrth-4900.github.io/particle-voice",
   "scripts": {
     "build": "pug src/index.pug -o dist && cp src/script.js dist/",
-    "dev": "npm run build && npx http-server dist -p 5555 --cors"
+    "dev": "npm run build && npx http-server dist -p 5555 --cors -a localhost"
+  },
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
   }
 }
