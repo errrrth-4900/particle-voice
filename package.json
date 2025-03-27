@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "pug src/index.pug -o dist && cp src/script.js dist/",
+    "dev": "npm run build && npx http-server dist -p 5555 --cors"
+  }
+}
